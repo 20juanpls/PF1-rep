@@ -149,7 +149,7 @@ def dt_sequences():
     tuple2 = ('pup', 'kitty', 'cub')
     input('  tuple1 = '+str(tuple1)+'\n  tuple2 = '+str(tuple2))
     fruit = 'pear'
-    input("  and now: fruit = 'pear'")
+    input("\n  and now: fruit = 'pear'")
 
     input('\n  fruit in tuple1: '+str(fruit in tuple1))
     input('\n  fruit not in tuple1:'+str(fruit not in tuple1))
@@ -187,13 +187,185 @@ def dt_sequences():
     input('  '+str(tuple3.count("cub")))
 
     input('\n<<<<<<Mutable Sequences - Lists>>>>>>')
-
+    input(' there are four list created...')
+    list1 = ['Computer Science', 'English', 'Physiology']
+    list2 = ['Papua New Guinea', 'Argentina', 'America']
+    list3 = [1, 3, 5, 7, 9]
+    list4 = ['Wonderful', 'Life', 'True dat']
+    input('  list1 = ' + str(list1) + '\n  list2 = ' + str(list2) + '\n  list3 = ' + str(list3) +
+          '\n  list4 = ' + str(list4))
+    list1[2] = 'Humanities'
+    input("\n  Replacing list[2] from 'Physiology' to 'Humanities' <list1[2] = 'Humanities'>")
+    input('  list1 = '+str(list1))
+    list3[2:1] = list2
+    input("\n  Replace list3[2:1] to list2 <list3[2:1] = list2>")
+    input('  list3 = '+str(list3))
+    list3 = [1, 3, 5, 7, 9]
+    input('\n  Resetting list3')
+    input('  list3 = '+str(list3))
+    list3[2] = list2
+    input('\n  Inserting list2 within list3 <list3[2] = list2>')
+    input('  list3 = '+str(list3))
+    del list3[1:4]
+    input('\n  Deleting indexes 1 - 4 (non-inclusive)<del list3[1:4]>')
+    input('  list3 = '+str(list3))
+    list3 = [1, 3, 5, 7, 9]
+    input('\n  Resetting list3 again')
+    input('  list3 = ' + str(list3))
+    list3[1:3:1] = list4
+    input('\n  s[i:j:k] = t')
+    input('  t must have the same length as the slice its replacing, and k is the step value')
+    input('  list3[1:3:1] = list4')
+    input('  list3 = '+str(list3))
+    del list3[0:5:2]
+    input('\n  del s[i:j:k]')
+    input('  Deleting 0 - 5 step 2 <del list3[0:5:2]>')
+    input('  list3 = '+str(list3))
+    list3.append('All the Best')
+    input("\n  Appending 'All the Best' in list3 <list3.append('All the Best')>")
+    input('  list3 = '+str(list3))
+    list3.clear()
+    input("\n  Clearing list3 <list3.clear()>")
+    input('  list3 = '+str(list3))
+    list3 = [1, 3, 5, 7, 9]
+    input('\n  Resetting list3 yet again')
+    input('  list3 = ' + str(list3))
+    list4.extend(list3)
+    input('\n  Extending contents of list4 with contents of list3 <list4.extend(list3)>')
+    input('  list4 = '+str(list4))
+    list3 *= 2
+    input('\n  Multiplying list3 contents times 2 <list3 *= 2>')
+    input('  list3 = '+str(list3))
+    list3.insert(4, 'Hey There')
+    input("\n  Inserting 'Hey There' in list3[4] <list3.insert(4,'Hey There')>")
+    input('  list3 = '+str(list3))
+    item_removed = list4.pop(2)
+    input('\n  Popping item in list4[2] out of list4 <item_removed = list4.pop(2)>')
+    input('  list4 = '+str(list4)+'\n  item_removed = '+item_removed)
+    list4.remove(5)
+    input('\n  Removing item in list4[5] <list4.remove(5)>')
+    input('  list4 = '+str(list4))
+    input('  NOTICE HOW IT REMOVES list4[5] FROM WHEN THE list4 WAS ON THE STATE BEFORE THE POP'
+          "\n  before pop : ['Wonderful', 'Life', 'True dat', 1, 3, 5<to be removed>, 7, 9]"
+          "\n  after pop  :   ['Wonderful', 'Life', <'True dat' popped>, 1, 3, 5<to be removed>, 7, 9]")
+    list4.reverse()
+    input('\n  Reversing list4 <list4.reverse()>')
+    input('  list4 = '+str(list4))
+    print('')
     is_it_done = the_question('Sequences')
     return is_it_done
 
 
 def dt_mapping():
     print('--------------------Data Types - Mapping--------------------')
+    print(' Creating an empty dictionary...')
+    home_state = {}
+    print(type(home_state))
+    home_state = {'Miesha': 'Florida', 'Rodger': 'Nebraska', 'Sheldon': 'Arizona',
+                  'Merissa': 'Hawaii', 'William': 'Washington', 'Clora': 'California'}
+    input("  home_state = {'Miesha': 'Florida', 'Rodger': 'Nebraska', 'Sheldon': 'Arizona',"
+          "\n                'Merissa': 'Hawaii', 'William': 'Washington', 'Clora': 'California'}")
+    input('\n  dictionary.values()')
+    input('  Returning values as a sequence of tuples <home_state.values()>')
+    input('  '+str(home_state.values()))
+    input('\n  dictionary.pop() returns the value AND removes the item'
+          "\n  'Sheldon not found - pop' is the 'default' and will be shown"
+          "\n  if the item is not found in the dictionary")
+    value = home_state.pop('Sheldon', 'Sheldon not found - pop')
+    input("  <value = home_state.pop('Sheldon', 'Sheldon not found - pop')>")
+    input("  value = '"+str(value) + "' from Sheldon pop.")
+    input("  the Key is 'Sheldon', the value is 'Arizona' !!!")
+    input('\n  dictionary.get() returns the value but does not remove')
+    value = home_state.get('Rodger', 'Rodger Not found - get')
+    input("  <value = home_state.get('Rodger', 'Rodger Not found - get')>")
+    input("  value = '" + str(value) + "' from Rodger get.")
+    input("  the Key is 'Rodger', the value is 'Nebraska' !!!")
+    input('\n  And now lets go check at the values with dictionary.values() <home_state.values()>')
+    input('  '+str(home_state.values()))
+    input('\n  Confirming if item exist before deleting with IF statement, otherwise get KeyError exception')
+    if 'William' in home_state:
+        del home_state['William']
+        input("  item 'William' deleted.")
+    else:
+        input("  'William' is not in the dictionary")
+    input("\n  If William was deleted, then that means 'William': 'Washington' was deleted")
+    input('  home_state = '+str(home_state))
+    input("\n  Confirming if item exists before accessing with IF statement, otherwise ger KeyError exception")
+    if 'George' in home_state:
+        value = home_state['George']
+        input("  value = '"+str(value)+"' associated with key 'George'")
+    else:
+        input("  'George' is not in the dictionary")
+    input('\n  dictionary.get() returns the value but does not remove')
+    input("  <value = home_state.get('William', 'William not found -')>")
+    value = home_state.get('William', 'William not found -')
+    input("  '"+str(value)+"' from 'William' get.")
+    input('\n  dictionary.clear() removes all items <home_state.clear>')
+    home_state.clear()
+    input('  home_state cleared: home_state = '+str(home_state))
+    input("\n  Adding a new item to the dictionary <home_state['Joe'] = 'Louisiana'>")
+    home_state['Joe'] = 'Louisiana'
+    input('  Now printing all the values in home_state using For loop:')
+    for value in home_state.values():
+        print("   "+value)
+    input("")
+    input("  Adding another item to the dictionary <home_state['Abe'] = 'Montana'>")
+    home_state['Abe'] = 'Montana'
+    input('  Now printing all the values in home_state using For loop:')
+    for value in home_state.values():
+        print("   "+value)
+    input("")
+    input("  Now adding yet another item to the dictionary <home_state['Bert'] = 'Tennessee'>")
+    home_state['Bert'] = 'Tennessee'
+    input("  Now printing the items using dictionary.items() in a For loop, which will return all"
+          "\n  keys and values")
+    input(">  for key, value in home_state.items():"
+          "\n>      print(key, value)")
+    for key, value in home_state.items():
+        print("   ", key, value)
+    input("")
+    input("  Now printing the keys using dictionary.keys() in a For loop, which will return all keys")
+    input(">  for key in home_state.keys():"
+          "\n>      print(key)")
+    for key in home_state.keys():
+        print("   "+key)
+    input("")
+    input("  dictionary.popitem() will return a randomly selected variable"
+          "\n  AND removes that item")
+    input(">  value = home_state.popitem()")
+    value = home_state.popitem()
+    input("  '"+str(value)+"' was popitemed!")
+    input("\n  Now we check if 'Abe' key is in the dictionary using an If statement")
+    if 'Abe' in home_state:
+        input("  I found 'Abe' key")
+    else:
+        input("  'Abe' key must have been popitemed.")
+    input("\n  Now checking if 'George' key is NOT in the dictionary using an If statement")
+    if 'George' not in home_state:
+        input("  I did not find key 'George'")
+    input('  Now we will loop through dictionary.items() and it will return all keys and values')
+    for key, value in home_state.items():
+        print("   ", key, value)
+    input('')
+    input("  Find the key for a specified value; First determine if value is in the dictionary")
+    input("  In this case the value is 'Tennessee', and we would be looking for its key and value"
+          "\n  using a For loop")
+    input(">  for key, value in home_state.items():"
+          "\n>      if value == 'Tennessee':"
+          "\n>          found = True    <we have found the value>"
+          "\n>          found_key = key <now we set found_key to key>")
+    found = False
+    found_key = None
+    for key, value in home_state.items():
+        if value == 'Tennessee':
+            found = True
+            found_key = key
+    if found:
+        input("  Key '"+found_key+"' was found.")
+    else:
+        input("  value 'Tennessee' was not found in dictionary.")
+    input("Our final dictionary is:"
+          "home_state = "+str(home_state))
     is_it_done = the_question('Mapping')
     return is_it_done
 
@@ -205,7 +377,7 @@ def dt_sets():
 
 
 def the_question(review_type):
-    print('Data Type - '+review_type+' review finished!')
+    print('\nData Type - '+review_type+' review finished!')
     the_answer = input('Would you like to select another Data type review?( y or n ): ')
     if the_answer == 'y':
         return True
