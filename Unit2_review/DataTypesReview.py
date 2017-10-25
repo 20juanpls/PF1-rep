@@ -442,16 +442,16 @@ def dt_sets():
     s1 = set('abcde')
     s2 = set('defgh')
 
-    input("\n  Returning all elements from both s1 and s2; In the next lines of code s1"
-          "\n  and s2 can be used interchangeably ")
+    input("\n  Returning all elements from both 's1' and 's2'; In the next lines of code 's1'"
+          "\n  and 's2' can be used interchangeably ")
     input(">  s1.union(s2)"
           "  or"
           ">  s2.union(s1)")
     input("  s1.union(s2) = "+str(s1.union(s2)) +
           "\n  s2.union(s1) = "+str(s2.union(s1)))
 
-    input("\n  Returning all elements in common from both s1 and s2; in the next lines of"
-          "\n  code s1 and s2 can be used interchangeably")
+    input("\n  Returning all elements in common from both 's1' and s2; in the next lines of"
+          "\n  code 's1' and 's2' can be used interchangeably")
     input(">  s1.intersection(s2)"
           "  or"
           ">  s2.intersection(s1)")
@@ -463,13 +463,13 @@ def dt_sets():
     input("  s1 = "+str(s1) +
           "\n  s2 = "+str(s2))
 
-    input("\n  Returning all elements IN s1 but NOT IN s2")
+    input("\n  Returning all elements IN 's1' but NOT IN 's2'")
     input(">  s1.difference(s2) = "+str(s1.difference(s2)))
 
-    input("\n  Returning all elements IN s2 but NOT IN s1")
+    input("\n  Returning all elements IN 's2' but NOT IN 's1'")
     input(">  s2.difference(s1) = " + str(s2.difference(s1)))
 
-    input("\n  Returning all elements that are NOT SHARED between s1 and s2")
+    input("\n  Returning all elements that are NOT SHARED between 's1' and 's2'")
     input(">  s1.symmetric_difference(s2) = "+str(s1.symmetric_difference(s2)))
 
     input("\n  Re instantiating new SETs:"
@@ -478,15 +478,27 @@ def dt_sets():
     s1 = set('cde')
     s2 = set('abcdefg')
 
+    input("\n  REMEMBER: SETS will be UNORDERED, so the way a set sorts the elements it"
+          "\n  contains will be different than how you created/constructed it")
+    input("  s1 = " + str(s1) +
+          "\n  s2 = " + str(s2))
 
+    input("\n  Checking if 's1' is a subset of 's2'(does 's2' contain everything 's1' has):")
+    input("<  s1.issubset(s2) = "+str(s1.issubser(s2)))
+    input("  Checking if 's2' is a superset of 's1'(is everything in 's1' also in 's2'):")
+    input("<  s2.issuperset(s1) = "+str(s2.issupperset(s1)))
 
+    input("\n  Checking is 's1' has NO common elements with 's2':")
+    input("<  s1.isdisjoint(s2) = "+str(s1.isdisjoint(s2)))
 
+    input("\n  Returning and Removing an arbitrary element from 's1':")
+    input("<  s1.pop() = "+str(s1.pop()))
 
-
-
-
-
-
+    input("\n  Creating a FROZENSET:")
+    set_frozen = frozenset('1234567')
+    input("<  set_frozen = frozenset('1234567')")
+    input("  set_frozen = "+str(set_frozen))
+    input("  NOTE: An attempt to update a frozenset will result in an ERROR")
 
     is_it_done = the_question('Sets')
     return is_it_done
