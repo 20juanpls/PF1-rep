@@ -372,6 +372,122 @@ def dt_mapping():
 
 def dt_sets():
     print('--------------------Data Types - Sets--------------------')
+    input("KEEP IN MIND as we go though this portion of the review: the constructor"
+          "\n<set()> and brackets <{<content goes here>}> can be used to create an "
+          "\nempty SET."
+          "\nALSO: '>' means code inclusion")
+    input('\n Creating a SET using <set()> from a string...')
+    set1 = set('This is a test of sets.')
+    input(">  set1 = set('This is a test of sets')")
+    input('  set1 = '+str(set1))
+    input("  NOTE: it created a SET of the possible characters in the string, only one"
+          "\n  is needed for the set")
+
+    input('\n  Creating a SET using <set()> from a LIST of strings')
+    set2 = set(['This', 'is', 'a','test', 'a', 'of', 'sets', '.', 'a'])
+    input(">  set2 = set(['This', 'is', 'a','test', 'a', 'of', 'sets', '.', 'a'])")
+    input('  set2 = '+str(set2))
+    input("  NOTE: because we are using a LIST inside a SET, the strings in each LIST"
+          "\n  index become a component of the SET, even if its repeated in the SET."
+          "\n  Reason so is because LISTs are MUTABLE")
+
+    input('\n  Creating a SET using {} from a  TUPLE of strings')
+    set3 = {('Abilene', 'Beaumont', 'Cisco', 'Devine', 'Eagle Pass')}
+    input(">  set3 = {('Abilene', 'Beaumont', 'Cisco', 'Devine', 'Eagle Pass')}")
+    input("  set3 = "+str(set3))
+    input("  NOTE: because we are using a TUPLE inside a SET, the TUPLE itself is treated"
+          "\n  as a component of the SET. Reason so is because TUPLESs are IMMUTABLE")
+
+    input("\n  NOTE THE DIFFERENCE BETWEEN CREATING SETS WITH {} AND <set()>:")
+    input("\n  Creating a SET using {} from a string with non-unique characters")
+    set4 = {'1111111111222222222223333333333334444444444455555555555'}
+    input(">  set4 = {'1111111111222222222223333333333334444444444455555555555'}")
+    input("  set4 = "+str(set4))
+
+    input("\n  Creating a SET using <set()> from a string with non-unique characters")
+    set5 = set('1111111111222222222223333333333334444444444455555555555')
+    input(">  set5 = set('1111111111222222222223333333333334444444444455555555555')")
+    input("  set5 = "+str(set5))
+    input("  NOTE: the reason why set5 is unordered is because naturally Objects in SETs "
+          "\n  are UNORDERED. ")
+
+    input("\n  Creating a SET using <set()> from a string")
+    set6 = set('56789')
+    input(">  set6 = set('56789')")
+    input("  set 6 = "+str(set6))
+
+    input("\n  Adding/Updating set6 to set5")
+    set5.update(set6)
+    input(">  set5.update(set6)")
+    input("  set5 = "+str(set5))
+
+    input("\n  Removing element '9' in set5; ERROR if not found ")
+    set5.remove('9')
+    input(">  set5.remove('9')")
+    input("  set5 = "+str(set5))
+
+    input("\n Discarding element '8' in set5; NO ERROR if not found")
+    set5.discard('8')
+    input(">  set5.discard('8')")
+    input("  set5 = "+str(set5))
+
+    input("\n  Removing all elements from set5 by clearing them")
+    set5.clear()
+    input(">  set5.clear()")
+    input("  set5 = "+str(set5))
+
+    input("\n  Creating new SETs:"
+          "\n  s1 = set('abcde')"
+          "\n  s2 = set('defgh')")
+    s1 = set('abcde')
+    s2 = set('defgh')
+
+    input("\n  Returning all elements from both s1 and s2; In the next lines of code s1"
+          "\n  and s2 can be used interchangeably ")
+    input(">  s1.union(s2)"
+          "  or"
+          ">  s2.union(s1)")
+    input("  s1.union(s2) = "+str(s1.union(s2)) +
+          "\n  s2.union(s1) = "+str(s2.union(s1)))
+
+    input("\n  Returning all elements in common from both s1 and s2; in the next lines of"
+          "\n  code s1 and s2 can be used interchangeably")
+    input(">  s1.intersection(s2)"
+          "  or"
+          ">  s2.intersection(s1)")
+    input("  s1.intersection(s2) = " + str(s1.intersection(s2)) +
+          "\n  s2.intersection(s1) = " + str(s2.intersection(s1)))
+
+    input("\n  REMEMBER: SETS will be UNORDERED, so the way a set sorts the elements it"
+          "\n  contains will be different than how you created/constructed it")
+    input("  s1 = "+str(s1) +
+          "\n  s2 = "+str(s2))
+
+    input("\n  Returning all elements IN s1 but NOT IN s2")
+    input(">  s1.difference(s2) = "+str(s1.difference(s2)))
+
+    input("\n  Returning all elements IN s2 but NOT IN s1")
+    input(">  s2.difference(s1) = " + str(s2.difference(s1)))
+
+    input("\n  Returning all elements that are NOT SHARED between s1 and s2")
+    input(">  s1.symmetric_difference(s2) = "+str(s1.symmetric_difference(s2)))
+
+    input("\n  Re instantiating new SETs:"
+          "\n  s1 = set('cde')"
+          "\n  s2 = set('abcdefg')")
+    s1 = set('cde')
+    s2 = set('abcdefg')
+
+
+
+
+
+
+
+
+
+
+
     is_it_done = the_question('Sets')
     return is_it_done
 
