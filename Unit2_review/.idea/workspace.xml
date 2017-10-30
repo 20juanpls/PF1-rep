@@ -14,14 +14,15 @@
       <file leaf-file-name="DataTypesReview.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataTypesReview.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="376" column="24" lean-forward="true" selection-start-line="376" selection-start-column="24" selection-end-line="376" selection-end-column="24" />
+            <state relative-caret-position="390">
+              <caret line="507" column="29" lean-forward="false" selection-start-line="507" selection-start-column="29" selection-end-line="507" selection-end-column="29" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
                 <element signature="e#117#862#0" expanded="false" />
                 <element signature="e#887#4284#0" expanded="false" />
                 <element signature="e#4311#9497#0" expanded="false" />
                 <element signature="e#9522#15297#0" expanded="false" />
+                <element signature="e#15319#21119#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,8 +77,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="Scratches" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,6 +305,7 @@
             <element signature="e#887#4284#0" expanded="false" />
             <element signature="e#4311#9497#0" expanded="false" />
             <element signature="e#9522#15297#0" expanded="false" />
+            <element signature="e#15319#21119#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -318,6 +320,7 @@
             <element signature="e#887#4284#0" expanded="false" />
             <element signature="e#4311#9497#0" expanded="false" />
             <element signature="e#9522#15297#0" expanded="false" />
+            <element signature="e#15319#21119#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -332,6 +335,7 @@
             <element signature="e#887#4284#0" expanded="false" />
             <element signature="e#4311#9497#0" expanded="false" />
             <element signature="e#9522#15297#0" expanded="false" />
+            <element signature="e#15319#21119#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -346,6 +350,7 @@
             <element signature="e#887#4284#0" expanded="false" />
             <element signature="e#4311#9497#0" expanded="false" />
             <element signature="e#9522#15297#0" expanded="false" />
+            <element signature="e#15319#21119#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -360,6 +365,7 @@
             <element signature="e#887#4284#0" expanded="false" />
             <element signature="e#4311#9497#0" expanded="false" />
             <element signature="e#9522#15297#0" expanded="false" />
+            <element signature="e#15319#21119#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -374,6 +380,22 @@
             <element signature="e#887#4284#0" expanded="false" />
             <element signature="e#4311#9497#0" expanded="false" />
             <element signature="e#9522#15297#0" expanded="false" />
+            <element signature="e#15319#21119#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataTypesReview.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#117#862#0" expanded="false" />
+            <element signature="e#887#4284#0" expanded="false" />
+            <element signature="e#4311#9497#0" expanded="false" />
+            <element signature="e#9522#15297#0" expanded="false" />
+            <element signature="e#15319#21119#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -390,14 +412,15 @@
     <entry file="file://$PROJECT_DIR$/../Program4/program_4.py" />
     <entry file="file://$PROJECT_DIR$/DataTypesReview.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="376" column="24" lean-forward="true" selection-start-line="376" selection-start-column="24" selection-end-line="376" selection-end-column="24" />
+        <state relative-caret-position="390">
+          <caret line="507" column="29" lean-forward="false" selection-start-line="507" selection-start-column="29" selection-end-line="507" selection-end-column="29" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
             <element signature="e#117#862#0" expanded="false" />
             <element signature="e#887#4284#0" expanded="false" />
             <element signature="e#4311#9497#0" expanded="false" />
             <element signature="e#9522#15297#0" expanded="false" />
+            <element signature="e#15319#21119#0" expanded="false" />
           </folding>
         </state>
       </provider>
