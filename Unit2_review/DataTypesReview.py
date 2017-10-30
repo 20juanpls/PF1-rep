@@ -197,8 +197,8 @@ def dt_sequences():
     list1[2] = 'Humanities'
     input("\n  Replacing list[2] from 'Physiology' to 'Humanities' <list1[2] = 'Humanities'>")
     input('  list1 = '+str(list1))
-    list3[2:1] = list2
-    input("\n  Replace list3[2:1] to list2 <list3[2:1] = list2>")
+    list3[2:4] = list2
+    input("\n  Replace list3[2:4] to list2 <list3[2:4] = list2>")
     input('  list3 = '+str(list3))
     list3 = [1, 3, 5, 7, 9]
     input('\n  Resetting list3')
@@ -219,7 +219,7 @@ def dt_sequences():
     input('  list3 = '+str(list3))
     del list3[0:5:2]
     input('\n  del s[i:j:k]')
-    input('  Deleting 0 - 5 step 2 <del list3[0:5:2]>')
+    input('  Deleting All, EXCEPT those items in indexes 0 - 5 step 2 <del list3[0:5:2]>')
     input('  list3 = '+str(list3))
     list3.append('All the Best')
     input("\n  Appending 'All the Best' in list3 <list3.append('All the Best')>")
@@ -343,7 +343,7 @@ def dt_mapping():
     input("\n  Now checking if 'George' key is NOT in the dictionary using an If statement")
     if 'George' not in home_state:
         input("  I did not find key 'George'")
-    input('  Now we will loop through dictionary.items() and it will return all keys and values')
+    input('\n  Now we will loop through dictionary.items() and it will return all keys and values')
     for key, value in home_state.items():
         print("   ", key, value)
     input('')
@@ -390,6 +390,8 @@ def dt_sets():
     input("  NOTE: because we are using a LIST inside a SET, the strings in each LIST"
           "\n  index become a component of the SET, even if its repeated in the SET."
           "\n  Reason so is because LISTs are MUTABLE")
+    input("  Also, items of same value are NOT REPEATED in the SET. Similar to creating"
+          "\n  a SET using <set()> from a string.")
 
     input('\n  Creating a SET using {} from a  TUPLE of strings')
     set3 = {('Abilene', 'Beaumont', 'Cisco', 'Devine', 'Eagle Pass')}
@@ -399,7 +401,7 @@ def dt_sets():
           "\n  as a component of the SET. Reason so is because TUPLESs are IMMUTABLE")
 
     input("\n  NOTE THE DIFFERENCE BETWEEN CREATING SETS WITH {} AND <set()>:")
-    input("\n  Creating a SET using {} from a string with non-unique characters")
+    input("\n  Creating a SET using <{}> from a string with non-unique characters")
     set4 = {'1111111111222222222223333333333334444444444455555555555'}
     input(">  set4 = {'1111111111222222222223333333333334444444444455555555555'}")
     input("  set4 = "+str(set4))
@@ -430,6 +432,10 @@ def dt_sets():
     set5.discard('8')
     input(">  set5.discard('8')")
     input("  set5 = "+str(set5))
+
+    input("\n  DIFFERENCE between REMOVING and DISCARDING is that if element is NOT found"
+          "\n  when REMOVING, and ERROR is given; Whereas with DISCARD, and ERROR is not "
+          "\n  given.")
 
     input("\n  Removing all elements from set5 by clearing them")
     set5.clear()
@@ -484,9 +490,9 @@ def dt_sets():
           "\n  s2 = " + str(s2))
 
     input("\n  Checking if 's1' is a subset of 's2'(does 's2' contain everything 's1' has):")
-    input("<  s1.issubset(s2) = "+str(s1.issubser(s2)))
+    input("<  s1.issubset(s2) = "+str(s1.issubset(s2)))
     input("  Checking if 's2' is a superset of 's1'(is everything in 's1' also in 's2'):")
-    input("<  s2.issuperset(s1) = "+str(s2.issupperset(s1)))
+    input("<  s2.issuperset(s1) = "+str(s2.issuperset(s1)))
 
     input("\n  Checking is 's1' has NO common elements with 's2':")
     input("<  s1.isdisjoint(s2) = "+str(s1.isdisjoint(s2)))
