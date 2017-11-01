@@ -183,6 +183,8 @@ def dt_sequences():
 
     input('\n  Returning the index of where pup was found <tuple3.index("pup", 2, 5)>:')
     input('  '+str(tuple3.index("pup", 2, 5)))
+    input('\n  Returning the index of where pup was found, BUT now using - <tuple3.index("pup")>:')
+    input('  ' + str(tuple3.index("pup")))
     input('\n  How many "cub" in tuple3? <tuple3.count("cub")>:')
     input('  '+str(tuple3.count("cub")))
 
@@ -195,16 +197,16 @@ def dt_sequences():
     input('  list1 = ' + str(list1) + '\n  list2 = ' + str(list2) + '\n  list3 = ' + str(list3) +
           '\n  list4 = ' + str(list4))
     list1[2] = 'Humanities'
-    input("\n  Replacing list[2] from 'Physiology' to 'Humanities' <list1[2] = 'Humanities'>")
+    input("\n  Replacing list1[2] from 'Physiology' to 'Humanities' <list1[2] = 'Humanities'>")
     input('  list1 = '+str(list1))
     list3[2:4] = list2
-    input("\n  Replace list3[2:4] to list2 <list3[2:4] = list2>")
+    input("\n  Replacing list3[2:4] with list2 <list3[2:4] = list2>")
     input('  list3 = '+str(list3))
     list3 = [1, 3, 5, 7, 9]
     input('\n  Resetting list3')
     input('  list3 = '+str(list3))
     list3[2] = list2
-    input('\n  Inserting list2 within list3 <list3[2] = list2>')
+    input('\n  Replacing list3[2] = 5 with list2 <list3[2] = list2>')
     input('  list3 = '+str(list3))
     del list3[1:4]
     input('\n  Deleting indexes 1 - 4 (non-inclusive)<del list3[1:4]>')
@@ -222,7 +224,7 @@ def dt_sequences():
     input('  Deleting All, EXCEPT those items in indexes 0 - 5 step 2 <del list3[0:5:2]>')
     input('  list3 = '+str(list3))
     list3.append('All the Best')
-    input("\n  Appending 'All the Best' in list3 <list3.append('All the Best')>")
+    input("\n  Appending 'All the Best' to the END OF list3 <list3.append('All the Best')>")
     input('  list3 = '+str(list3))
     list3.clear()
     input("\n  Clearing list3 <list3.clear()>")
@@ -239,15 +241,23 @@ def dt_sequences():
     list3.insert(4, 'Hey There')
     input("\n  Inserting 'Hey There' in list3[4] <list3.insert(4,'Hey There')>")
     input('  list3 = '+str(list3))
+
     item_removed = list4.pop(2)
     input('\n  Popping item in list4[2] out of list4 <item_removed = list4.pop(2)>')
     input('  list4 = '+str(list4)+'\n  item_removed = '+item_removed)
+    input('  len(list4) = '+str(len(list4)))
+    input("|!| s.pop(i) RETURNS item at index 'i' and REMOVES it from the list")
+
     list4.remove(5)
-    input('\n  Removing item in list4[5] <list4.remove(5)>')
+    input('\n  Removing item "5" in list4 <list4.remove(5)>')
     input('  list4 = '+str(list4))
-    input('  NOTICE HOW IT REMOVES list4[5] FROM WHEN THE list4 WAS ON THE STATE BEFORE THE POP'
-          "\n  before pop : ['Wonderful', 'Life', 'True dat', 1, 3, 5<to be removed>, 7, 9]"
-          "\n  after pop  :   ['Wonderful', 'Life', <'True dat' popped>, 1, 3, 5<to be removed>, 7, 9]")
+    input('  len(list4) = ' + str(len(list4)))
+    list4.remove('Wonderful')
+    input("\n  Removing item 'Wonderful' in list4 <list4.remove('Wonderful')>")
+    input('  list4 = ' + str(list4))
+    input('  len(list4) = ' + str(len(list4)))
+    input("|!| s.remove(x) REMOVES the first item that matches with item 'x'")
+
     list4.reverse()
     input('\n  Reversing list4 <list4.reverse()>')
     input('  list4 = '+str(list4))
@@ -376,44 +386,56 @@ def dt_sets():
           "\n<set()> and brackets <{<content goes here>}> can be used to create an "
           "\nempty SET."
           "\nALSO: '>' means code inclusion")
-    input('\n Creating a SET using <set()> from a string...')
+    input('\n CONSTRUCTING a SET using <set()> from a string...')
     set1 = set('This is a test of sets.')
-    input(">  set1 = set('This is a test of sets')")
+    input(">  set1 = set('This is a test of sets.')")
     input('  set1 = '+str(set1))
-    input("  NOTE: it created a SET of the possible characters in the string, only one"
+    input("  NOTE: it constructed a SET of the possible characters in the string, only one"
           "\n  is needed for the set")
 
-    input('\n  Creating a SET using <set()> from a LIST of strings')
-    set2 = set(['This', 'is', 'a','test', 'a', 'of', 'sets', '.', 'a'])
+    input('\n  CONSTRUCTING a SET using <set()> from a LIST of strings')
+    set2 = set(['This', 'is', 'a', 'test', 'a', 'of', 'sets', '.', 'a'])
     input(">  set2 = set(['This', 'is', 'a','test', 'a', 'of', 'sets', '.', 'a'])")
     input('  set2 = '+str(set2))
-    input("  NOTE: because we are using a LIST inside a SET, the strings in each LIST"
-          "\n  index become a component of the SET, even if its repeated in the SET."
-          "\n  Reason so is because LISTs are MUTABLE")
-    input("  Also, items of same value are NOT REPEATED in the SET. Similar to creating"
+    input("  NOTE: because we are using a LIST inside a SET constructor, the strings "
+          "\n  in each LIST index become a component of the SET, even if its repeated"
+          "\n  in the SET.")
+    input("|!|REMEMBER: items of same value are NOT REPEATED in the SET. Similar to creating"
           "\n  a SET using <set()> from a string.")
 
     input('\n  Creating a SET using {} from a  TUPLE of strings')
     set3 = {('Abilene', 'Beaumont', 'Cisco', 'Devine', 'Eagle Pass')}
     input(">  set3 = {('Abilene', 'Beaumont', 'Cisco', 'Devine', 'Eagle Pass')}")
     input("  set3 = "+str(set3))
-    input("  NOTE: because we are using a TUPLE inside a SET, the TUPLE itself is treated"
-          "\n  as a component of the SET. Reason so is because TUPLESs are IMMUTABLE")
+    input("  NOTE: because we are CREATING a set with a TUPLE inside , the TUPLE itself"
+          "\n  is treated as a component of the SET.")
+
+    input("\n|!|  What if we CONSTRUCT a SET with a TUPLE inside the CONSTRUCTOR?")
+    set_t = set(('Abilene', 'Beaumont', 'Cisco', 'Devine', 'Eagle Pass'))
+    input(">  set_t = set(('Abilene', 'Beaumont', 'Cisco', 'Devine', 'Eagle Pass'))")
+    input("  set_t = "+str(set_t))
+    input("  NOTE: Though TUPLES are immutable, the items of the TUPLE are still being"
+          "\n  treated as components of the set_t. Similar to what happens when you "
+          "\n  CONSTRUCT a SET using a LIST inside a CONSTRUCTOR.")
 
     input("\n  NOTE THE DIFFERENCE BETWEEN CREATING SETS WITH {} AND <set()>:")
-    input("\n  Creating a SET using <{}> from a string with non-unique characters")
+    input("\n  CREATING a SET using <{}> from a string with non-unique characters")
     set4 = {'1111111111222222222223333333333334444444444455555555555'}
     input(">  set4 = {'1111111111222222222223333333333334444444444455555555555'}")
     input("  set4 = "+str(set4))
+    input("  NOTE: remember '1111<really long #>' is 1 item that is being CREATED"
+          "\n  in a SET! ")
 
-    input("\n  Creating a SET using <set()> from a string with non-unique characters")
+    input("\n  CONSTRUCTING a SET using <set()> from a string with non-unique characters")
     set5 = set('1111111111222222222223333333333334444444444455555555555')
     input(">  set5 = set('1111111111222222222223333333333334444444444455555555555')")
     input("  set5 = "+str(set5))
-    input("  NOTE: the reason why set5 is unordered is because naturally Objects in SETs "
+    input("  NOTE: Because we are using the set() CONSTRUCTOR, it constructs a set using"
+          "\n  all of the characters possible in that string.")
+    input("  ALSO: the reason why set5 is unordered is because naturally Objects in SETs "
           "\n  are UNORDERED. ")
 
-    input("\n  Creating a SET using <set()> from a string")
+    input("\n  CONSTRUCTING a SET using <set()> from a string")
     set6 = set('56789')
     input(">  set6 = set('56789')")
     input("  set 6 = "+str(set6))
@@ -442,7 +464,7 @@ def dt_sets():
     input(">  set5.clear()")
     input("  set5 = "+str(set5))
 
-    input("\n  Creating new SETs:"
+    input("\n  CONSTRUCTING new SETs:"
           "\n  s1 = set('abcde')"
           "\n  s2 = set('defgh')")
     s1 = set('abcde')
