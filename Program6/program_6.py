@@ -33,7 +33,7 @@ while P_cont:
 # print(str(sales_reps))
 
 # you can just enter the information per person, and then per week, per day!!
-print('\nRequirement 5')
+print('\nRequirement 5, 6 & 7')
 print('processing sales data...')
 sales_data = []
 for week in weeks:
@@ -51,18 +51,18 @@ for week in weeks:
 # print(str(sales_data))
 
 print('\nRequirement 8')
-print("Type in the compliments given by the respective user for the following, "
-      "If user has no further compliment's, press ENTER without typing")
+print("Type in the compliments given by the respective user for the following,"
+      "\nIf user has no further compliments, Type '-1' or press ENTER without typing")
 print('\nRequirement 9')
 complements_data = []
 for person in sales_reps.keys():
-    print('    '+person+"'s compliments:")
+    print(' '+person+"'s compliments:")
     FinalNumOfComp = 0
     Comp_c = True
     count = 0
     while Comp_c:
         Comp_int = input('   '+str(count+1)+'. ')
-        if Comp_int == '':
+        if Comp_int == '' or Comp_int == '-1':
             FinalNumOfComp = count
             Comp_c = False
         count += 1
@@ -86,12 +86,23 @@ for person, dealership in sales_reps.items():
             totalCars += CarsSold
             DayCount += 1
         WeekCount += 1
-    print("\nTotal Cars Sold (per rep): " + str(totalCars))
-    print("Average Cars Sold (per rep): " + str(round(totalCars / 6)))
-    print("Number of Compliments (per rep): " + str(complements_data[PersonCount]))
+    print("\nTotal Cars Sold: " + str(totalCars))
+    print("Average Cars Sold: " + str(round(totalCars / 6)))
+    print("Number of Compliments: " + str(complements_data[PersonCount]))
     PersonCount += 1
 
-
+print("\nRequirement 11")
+print("This program was kind of weird for me at first because I didn't quite understood"
+      "\nwhat exactly was it asking from me in requirements 5 - 7. I decided to work on"
+      "\nwhat the instructions required me to do, which required the user to input the "
+      "\nnumber of cars sold per day, per week; which meant that I had to loop through "
+      "\nthe 2 weeks, than days, than through everyone in the dictionary. It was only a"
+      "\ncouple of days ago where I found out that you(the instructor) were lenient of"
+      "\nwhat ever method the student decided to approach those requirement; and though"
+      "\nI could change it ... I've already went through the effort of making the loops"
+      "\nsequence that way. Besides, I believe the user will have an easier time placing"
+      "\nin the data by per Dealer per Day. Overall, I thought is was a fun, though"
+      "\nat first confusing, assignment")
 
 
 
