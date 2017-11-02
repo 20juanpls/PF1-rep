@@ -70,26 +70,20 @@ for person in sales_reps.keys():
 # print(str(complements_data))
 
 print('\nRequirement 10')
-PersonCount = 0
 for person, dealership in sales_reps.items():
     print('--------------------------------------')
     print(person+' of '+dealership)
     print('Cars Sold')
     totalCars = 0
-    WeekCount = 0
     for week in weeks:
         print('\n'+week)
-        DayCount = 0
         for day in days:
-            CarsSold = sales_data[WeekCount][DayCount][PersonCount]
+            CarsSold = sales_data[weeks.index(week)][days.index(day)][list(sales_reps.keys()).index(person)]
             print(day+': ' + str(CarsSold))
             totalCars += CarsSold
-            DayCount += 1
-        WeekCount += 1
     print("\nTotal Cars Sold: " + str(totalCars))
     print("Average Cars Sold: " + str(round(totalCars / 6)))
-    print("Number of Compliments: " + str(complements_data[PersonCount]))
-    PersonCount += 1
+    print("Number of Compliments: " + str(complements_data[list(sales_reps.keys()).index(person)]))
 
 print("\nRequirement 11")
 print("This program was kind of weird for me at first because I didn't quite understood"
