@@ -22,8 +22,13 @@ def main():
     print("##########    In main()    ##########")
     pokemon_list = add_pokemon()
 
-    print("\nRequirement 3:")
+    print("\nRequirement 3 & 4:")
     display_pokemon(pokemon_list)
+
+    print("\nRequirement 5:")
+    print("Program 8 was a fairly quick program to finish for me. I've had experience with"
+          "\nobject oriented programming beforehand, so I didn't really struggle with this"
+          "\none. I appreciate the Pokemon reference, very cool.")
 
 
 # add_pokemon() function

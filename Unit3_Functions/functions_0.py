@@ -122,19 +122,19 @@ def test_scope_0(w,x,y,z,zl):
 
 def test_scope_1():
     # Show the global variables
-    input("\ntest_scope_1() ACCESSES the variables but ONLY for DISPLAY,"
-          "\nNOT for REASSIGNMENT!")
+    input("\n  test_scope_1() ACCESSES the variables but ONLY for DISPLAY,"
+          "\n  NOT for REASSIGNMENT!")
     # Access the globals but ONLY  for display, NOT for reassignment!
-    input("\nIn test_scope_1():")
-    input("> globe_1 = {}".format(globe_1))
-    input("> globe_2 = {}".format(globe_2))
-    input("> globe_3 = {}".format(globe_3))
+    input("\n  In test_scope_1():")
+    input("  > globe_1 = {}".format(globe_1))
+    input("  > globe_2 = {}".format(globe_2))
+    input("  > globe_3 = {}".format(globe_3))
 
 
 def test_scope_2():
-    input("\nIn test_scope_2():")
-    input("\n> global globe_1, globe_2, globe_3"
-          "\n> globe_1, globe_2, globe_3 = 777, 888, 999")
+    input("\n  In test_scope_2():")
+    input("\n  > global globe_1, globe_2, globe_3"
+          "\n  > globe_1, globe_2, globe_3 = 777, 888, 999")
     # Access global variables for reassignment
     # MUST use the 'global' keyword to access the globals for reassignment
     global globe_1, globe_2, globe_3
@@ -143,32 +143,32 @@ def test_scope_2():
     globe_1, globe_2, globe_3 = 777, 888, 999
 
     # Show that the globals were changed
-    input("\nAfter global statement:")
-    input("Changes applied by test_scope_2 are applied globally since"
-          "\nthe global keyword was used!")
-    input("> globe_1 = {}".format(globe_1))
-    input("> globe_2 = {}".format(globe_2))
-    input("> globe_3 = {}".format(globe_3))
+    input("\n  After global statement:")
+    input("  Changes applied by test_scope_2 are applied globally since"
+          "\n  the global keyword was used!")
+    input("  > globe_1 = {}".format(globe_1))
+    input("  > globe_2 = {}".format(globe_2))
+    input("  > globe_3 = {}".format(globe_3))
 
 
 def test_scope_3():
-    input("\nLocal variables 'shadow' or 'replace' global variables")
-    input("The variables are NOT the same as the global variables that were previously defined")
+    input("\n  Local variables 'shadow' or 'replace' global variables")
+    input("  The variables are NOT the same as the global variables that were previously defined")
 
     globe_1 = 'abc'
     globe_2 = 'abc'
     globe_3 = 'abc'
 
-    input("\nIn test_scope_3():")
-    input("Since the global keyword was NOT used, new local variables"
-          "\nare created with the SAME NAMES as the global variables.")
-    input("> globe_1 = {}".format(globe_1))
-    input("> globe_2 = {}".format(globe_2))
-    input("> globe_3 = {}".format(globe_3))
+    input("\n  In test_scope_3():")
+    input("  Since the global keyword was NOT used, new local variables"
+          "\n  are created with the SAME NAMES as the global variables.")
+    input("  > globe_1 = {}".format(globe_1))
+    input("  > globe_2 = {}".format(globe_2))
+    input("  > globe_3 = {}".format(globe_3))
 
-    input("\nCall the built-in function 'locals()' to show the variables"
-          "\nthat are LOCAL to the test_scope_3 function")
-    input("locals: "+ str(locals()))
+    input("\n  Call the built-in function 'locals()' to show the variables"
+          "\n  that are LOCAL to the test_scope_3 function")
+    input("  locals: "+ str(locals()))
 
 
 if __name__ == '__main__':

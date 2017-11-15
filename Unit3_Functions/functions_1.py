@@ -83,72 +83,72 @@ def main():
 
 
 def f1():
-    input("\n[f1()]In f1(), globals:")
-    input("[f1()]> i = {}".format(i))
-    input("[f1()]> j = {}".format(j))
-    input("[f1()]> k = {}".format(k))
-    input("[f1()]> id(i) = {}".format(id(i)))
-    input("[f1()]> id(j) = {}".format(id(j)))
-    input("[f1()]> id(k) = {}".format(id(k)))
+    input("\n  In f1(), globals:")
+    input("  [f1()]> i = {}".format(i))
+    input("  [f1()]> j = {}".format(j))
+    input("  [f1()]> k = {}".format(k))
+    input("  [f1()]> id(i) = {}".format(id(i)))
+    input("  [f1()]> id(j) = {}".format(id(j)))
+    input("  [f1()]> id(k) = {}".format(id(k)))
 
 
 def f2():
-    input("\n[f2()]In f2():")
-    input("[f2()]Using 'global' keyword to access variables for REASSIGNMENT")
-    input("[f2()]> global i, j, k")
+    input("\n  In f2():")
+    input("  Using 'global' keyword to access variables for REASSIGNMENT")
+    input("  [f2()]> global i, j, k")
     global i, j, k
-    input("[f2()]Now changing global variables")
-    input("[f2()]> i, j , k = 44, 55, 66")
+    input("  Now changing global variables")
+    input("  [f2()]> i, j , k = 44, 55, 66")
     i, j, k = 44, 55, 66
 
-    input("\n[f2()]Global variables now changed!:")
-    input("\n[f2()]In f2(), globals:")
-    input("[f2()]> i = {}".format(i))
-    input("[f2()]> j = {}".format(j))
-    input("[f2()]> k = {}".format(k))
-    input("[f2()]> id(i) = {}".format(id(i)))
-    input("[f2()]> id(j) = {}".format(id(j)))
-    input("[f2()]> id(k) = {}".format(id(k)))
+    input("\n  Global variables now changed!:")
+    input("\n  In f2(), globals:")
+    input("  [f2()]> i = {}".format(i))
+    input("  [f2()]> j = {}".format(j))
+    input("  [f2()]> k = {}".format(k))
+    input("  [f2()]> id(i) = {}".format(id(i)))
+    input("  [f2()]> id(j) = {}".format(id(j)))
+    input("  [f2()]> id(k) = {}".format(id(k)))
 
 
 def f3(a, b, c, d):
-    input("\n[f3()]In f3() before changes")
-    input("[f3()]Addresses are the same as those in main():")
-    input("[f3()]> a = {}".format(a))
-    input("[f3()]> b = {}".format(b))
-    input("[f3()]> c = {}".format(c))
-    input("[f3()]> d = {}".format(d))
-    input("[f3()]> id(a) = {}".format(id(a)))
-    input("[f3()]> id(b) = {}".format(id(b)))
-    input("[f3()]> id(c) = {}".format(id(c)))
-    input("[f3()]> id(d) = {}".format(id(d)))
+    input("\n  In f3() before changes")
+    input("  Addresses are the same as those in main():")
+    input("  [f3()]> a = {}".format(a))
+    input("  [f3()]> b = {}".format(b))
+    input("  [f3()]> c = {}".format(c))
+    input("  [f3()]> d = {}".format(d))
+    input("  [f3()]> id(a) = {}".format(id(a)))
+    input("  [f3()]> id(b) = {}".format(id(b)))
+    input("  [f3()]> id(c) = {}".format(id(c)))
+    input("  [f3()]> id(d) = {}".format(id(d)))
 
-    input("\n[f3()]Now changing local variables in f3()")
-    input("[f3()]> a, b, c, d[0] = 'aaa', 'bbb', 'ccc', 'changed'")
+    input("\n  Now changing local variables in f3()")
+    input("  [f3()]> a, b, c, d[0] = 'aaa', 'bbb', 'ccc', 'changed'")
     a, b, c, d[0] = 'aaa', 'bbb', 'ccc', 'changed'
-    input("[f3()]Addresses for immutables have changed since NEW objects"
-          "\n[f3()]for immutables are CREATED in f(3).")
-    input("[f3()]Addresses for mutables remains the same since the SAME"
-          "\n[f3()]object is being accessed (and changed).")
-    input("[f3()]> a = {}".format(a))
-    input("[f3()]> b = {}".format(b))
-    input("[f3()]> c = {}".format(c))
-    input("[f3()]> d = {}".format(d))
-    input("[f3()]> id(a) = {}".format(id(a)))
-    input("[f3()]> id(b) = {}".format(id(b)))
-    input("[f3()]> id(c) = {}".format(id(c)))
-    input("[f3()]> id(d) = {}".format(id(d)))
+    input("  Addresses for immutables have changed since NEW objects"
+          "\n  for immutables are CREATED in f(3).")
+    input("  Addresses for mutables remains the same since the SAME"
+          "\n  object is being accessed (and changed).")
+    input("  [f3()]> a = {}".format(a))
+    input("  [f3()]> b = {}".format(b))
+    input("  [f3()]> c = {}".format(c))
+    input("  [f3()]> d = {}".format(d))
+    input("  [f3()]> id(a) = {}".format(id(a)))
+    input("  [f3()]> id(b) = {}".format(id(b)))
+    input("  [f3()]> id(c) = {}".format(id(c)))
+    input("  [f3()]> id(d) = {}".format(id(d)))
 
-    input("\n[f3()]Returning variables changed locally to the caller")
+    input("\n  Returning variables changed locally to the caller")
     input("[f3()]> return a, b, c, d")
     return a, b, c, d
 
 
 def f4(keyword1, keyword2, keyword3):
-    input("\n[f4()]In f4() showing keyword argument values:")
-    input("[f4()]keyword1 = {}".format(keyword1))
-    input("[f4()]keyword2 = {}".format(keyword2))
-    input("[f4()]keyword3 = {}".format(keyword3))
+    input("\n  In f4() showing keyword argument values:")
+    input("  [f4()]>keyword1 = {}".format(keyword1))
+    input("  [f4()]>keyword2 = {}".format(keyword2))
+    input("  [f4()]>keyword3 = {}".format(keyword3))
 
 
 if __name__ == '__main__':

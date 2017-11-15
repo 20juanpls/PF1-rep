@@ -4,10 +4,11 @@ import os
 
 
 def main():
+    print("[[[[[[[[[[[[[[[[[[[[[[[[[[functions_review]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]")
     program_menu = True
     directory = directory_search()
     while program_menu:
-        print("Input the number cooresponding to the program you want to run:")
+        print("\nInput the number cooresponding to the program you want to run:")
         print("1) functions_0.py")
         print("2) functions_1.py")
         user_in = input("")
