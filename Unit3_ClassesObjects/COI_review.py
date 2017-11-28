@@ -9,17 +9,17 @@ def main():
     directory = directory_search()
     while program_menu:
         print("\nInput the number cooresponding to the program you want to run:")
-        print("1) functions_0.py")
-        print("2) functions_1.py")
+        print("1) classes_and_objects.py")
+        print("2) inheritance.py")
         print("3) EXIT")
         user_in = input("")
 
         if user_in == '1':
-            os.system('python'+directory+'/functions_0.py')
+            os.system('python'+directory+'/classes_and_objects.py')
             # exec(open("functions_0.py").read())
             done_question()
         elif user_in == '2':
-            os.system('python'+directory+'/functions_1.py')
+            os.system('python'+directory+'/inheritance.py')
             # exec(open("functions_1.py").read())
             done_question()
         elif user_in == '3':
