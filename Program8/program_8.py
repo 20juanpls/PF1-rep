@@ -15,6 +15,8 @@ class Pokemon:
 
 # main() function
 def main():
+    print("This is Program 8")
+
     print("\nRequirement 1:"
           "\nThis program keeps track of the Pokemon characters")
 
@@ -57,10 +59,14 @@ def add_pokemon():
 
 def display_pokemon(pokemon_list):
     print("\n__________    In display_pokemon()    _________")
-    for pokemon in pokemon_list:
-        poke_index = pokemon_list.index(pokemon) + 1
-        print("\n   Name of Pokemon #"+str(poke_index)+": "+pokemon.get_name())
-        print("\n   Ability of Pokemon #"+str(poke_index)+": "+pokemon.get_ability())
+    # if the list has objects, the pokemon are printed, else message appears
+    if len(pokemon_list) > 0:
+        for pokemon in pokemon_list:
+            poke_index = pokemon_list.index(pokemon) + 1
+            print("\n   Name of Pokemon #"+str(poke_index)+": "+pokemon.get_name())
+            print("\n   Ability of Pokemon #"+str(poke_index)+": "+pokemon.get_ability())
+    else:
+        print("\n   You have entered no pokemon.")
 
 
 if __name__ == '__main__':
