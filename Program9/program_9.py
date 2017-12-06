@@ -1,3 +1,7 @@
+# Bugger is printed when the user inputs no Pokemon
+Bugger = "\n   You have entered no pokemon."
+
+
 # pokemon Class
 class Pokemon:
     # __init__ called AUTOMATICALLY when an object is created
@@ -15,14 +19,19 @@ class Pokemon:
 
 # main() function
 def main():
-    print("This is Program 8")
+    print("This is Program 9")
 
     print("\nRequirement 1:"
-          "\nThis program keeps track of the Pokemon characters")
+          "\nThis program keeps track of the Pokemon characters, saves data to a file,"
+          "\nand displays the data from a file")
 
-    print("\nRequirement 2:")
+    # PokemonFile is created
+    PokemonFile = "Pokemon_File"
+
     print("##########    In main()    ##########")
     pokemon_list = add_pokemon()
+    print("\nRequirement 2:")
+    save_data(PokemonFile, pokemon_list)
 
     print("\nRequirement 3 & 4:")
     display_pokemon(pokemon_list)
@@ -35,7 +44,7 @@ def main():
 
 # add_pokemon() function
 def add_pokemon():
-    print("\n__________    In add_pokemon    __________")
+    print("\n__________    In add_pokemon()    __________")
     # creating a new list to hold pokemon characters
     pokemon_list = []
     # counter used in loop
@@ -66,7 +75,24 @@ def display_pokemon(pokemon_list):
             print("\n   Name of Pokemon #"+str(poke_index)+": "+pokemon.get_name())
             print("\n   Ability of Pokemon #"+str(poke_index)+": "+pokemon.get_ability())
     else:
-        print("\n   You have entered no pokemon.")
+        print(Bugger)
+# you can use display_data() in addition to display_pokemon()
+
+
+def save_data(file_name, pokemon_list):
+    print("\n__________    In save_data()    __________")
+    file_output1 = open(file_name, 'w')
+    if len(pokemon_list) > 0:
+        print("   Saving Pokemon data to Pokemon_File")
+        for pokemon in pokemon_list:
+            file_output1.write(pokemon.get_name()+"\n"+pokemon.get_ability()+"\n")
+        file_output1.close()
+    else:
+        print(Bugger)
+
+
+def display_data(file_name, pokemon_list):
+    print("\n__________    In display_data()    __________")
 
 
 if __name__ == '__main__':
