@@ -1,3 +1,6 @@
+from __future__ import print_function
+
+
 def main():
     file_name = input("\nEnter the name of the file?)")
     write_file(file_name)

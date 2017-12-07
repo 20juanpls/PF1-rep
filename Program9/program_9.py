@@ -21,30 +21,36 @@ class Pokemon:
 def main():
     print("This is Program 9")
 
-    print("\nRequirement 1:"
+    print("\n**Requirement 1**:"
           "\nThis program keeps track of the Pokemon characters, saves data to a file,"
           "\nand displays the data from a file")
 
     # PokemonFile is created
-    PokemonFile = "Pokemon_File"
+    pokemon_file = "Pokemon_File.txt"
 
-    print("##########    In main()    ##########")
+    print("\n####################    In main()    ####################")
     pokemon_list = add_pokemon()
-    print("\nRequirement 2:")
-    save_data(PokemonFile, pokemon_list)
 
-    print("\nRequirement 3 & 4:")
+    print("\n**Requirement 2**:")
+    save_data(pokemon_file, pokemon_list)
+
+    # displays pokemon from pokemon_list
     display_pokemon(pokemon_list)
 
-    print("\nRequirement 5:")
-    print("Program 8 was a fairly quick program to finish for me. I've had experience with"
-          "\nobject oriented programming beforehand, so I didn't really struggle with this"
-          "\none. I appreciate the Pokemon reference, very cool.")
+    # displays pokemon from pokemon_file
+    print("\n**Requirement 3**:")
+    display_data(pokemon_file)
+
+    print("\n**Requirement 4**:")
+    print("Program 9 was kind of tricky to fulfill since we had to incorporate File I/O in the program,"
+          "\nbut I've managed to find a compromise between using the old code from program_8 and the newer"
+          "\ncode for this program. It was a pretty fun program overall.")
 
 
 # add_pokemon() function
 def add_pokemon():
-    print("\n__________    In add_pokemon()    __________")
+    print("\n__________    In add_pokemon()<From Program 8>    __________")
+    print(" Program8's method of adding Pokemon using pokemon_list")
     # creating a new list to hold pokemon characters
     pokemon_list = []
     # counter used in loop
@@ -67,9 +73,10 @@ def add_pokemon():
 
 
 def display_pokemon(pokemon_list):
-    print("\n__________    In display_pokemon()    _________")
+    print("\n__________    In display_pokemon()<From Program 8>    _________")
     # if the list has objects, the pokemon are printed, else message appears
     if len(pokemon_list) > 0:
+        print(" Program8's method of displaying Pokemon using pokemon_list")
         for pokemon in pokemon_list:
             poke_index = pokemon_list.index(pokemon) + 1
             print("\n   Name of Pokemon #"+str(poke_index)+": "+pokemon.get_name())
@@ -80,10 +87,10 @@ def display_pokemon(pokemon_list):
 
 
 def save_data(file_name, pokemon_list):
-    print("\n__________    In save_data()    __________")
+    print("__________    In save_data()    __________")
     file_output1 = open(file_name, 'w')
     if len(pokemon_list) > 0:
-        print("   Saving Pokemon data to Pokemon_File")
+        print(" Saving Pokemon data to Pokemon_File")
         for pokemon in pokemon_list:
             file_output1.write(pokemon.get_name()+"\n"+pokemon.get_ability()+"\n")
         file_output1.close()
@@ -91,8 +98,33 @@ def save_data(file_name, pokemon_list):
         print(Bugger)
 
 
-def display_data(file_name, pokemon_list):
-    print("\n__________    In display_data()    __________")
+def display_data(file_name):
+    print("__________    In display_data()    __________")
+    len_read = open(file_name, 'r')
+    # getting file size
+    f_size = sum(1 for _ in len_read)
+    len_read.close()
+    # opening a new file to read through
+    file_input1 = open(file_name, 'r')
+
+    if f_size > 0:
+        print(" Displaying Pokemon data from Pokemon_File")
+        poke_index = 1
+        for x in range(1, f_size+1):
+            # extra space on 1st line
+            if x == 1:
+                print("")
+            # if odd num line, print pokemon name
+            if x % 2 != 0:
+                print("   Name of Pokemon #"+str(poke_index)+": "+file_input1.readline())
+            # if even num line, print ability
+            else:
+                print("   Ability of Pokemon #"+str(poke_index)+": "+file_input1.readline())
+                # count one poke index up
+                poke_index += 1
+        file_input1.close()
+    else:
+        print(Bugger)
 
 
 if __name__ == '__main__':

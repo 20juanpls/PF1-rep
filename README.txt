@@ -2,3 +2,14 @@
 Programming Fundamentals 1 repository
 
 pls understand
+
+dont turn around
+ayy lmao
+
+
+
+
+
+
+
+
