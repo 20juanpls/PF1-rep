@@ -104,7 +104,7 @@ def seek_read(file_name):
 
     input("\n Setting file pointer to byte position 36")
     file_seek1.seek(36)
-    input(" > file_seek.seek(36)")
+    input(" > file_seek1.seek(36)")
 
     input("\n Using the tell() method to report 1st file pointer position: {}".format(file_seek1.tell()))
 

@@ -4,7 +4,7 @@ import os
 
 
 def main():
-    print("[[[[[[[[[[[[[[[[[[[[[[[[[[functions_review]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]")
+    print("[[[[[[[[[[[[[[[[[[[[[[[[[[COI_review]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]")
     program_menu = True
     directory = directory_search()
     while program_menu:
