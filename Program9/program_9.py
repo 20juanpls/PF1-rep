@@ -100,28 +100,30 @@ def save_data(file_name, pokemon_list):
 
 def display_data(file_name):
     print("__________    In display_data()    __________")
-    len_read = open(file_name, 'r')
-    # getting file size
-    f_size = sum(1 for _ in len_read)
+    len_read = open(file_name, 'r+')
+    len_read.seek(0, 2)
+    # getting file size in byte form
+    f_size = len_read.tell()
     len_read.close()
-    # opening a new file to read through
-    file_input1 = open(file_name, 'r')
 
+    file_input1 = open(file_name, 'r')
     if f_size > 0:
-        print(" Displaying Pokemon data from Pokemon_File")
+        current_byte = 0
+        i_count = 1
         poke_index = 1
-        for x in range(1, f_size+1):
-            # extra space on 1st line
-            if x == 1:
+        while current_byte < f_size:
+            if i_count == 1:
                 print("")
-            # if odd num line, print pokemon name
-            if x % 2 != 0:
-                print("   Name of Pokemon #"+str(poke_index)+": "+file_input1.readline())
-            # if even num line, print ability
+                # if odd num line, print pokemon name
+            if i_count % 2 != 0:
+                print("   Name of Pokemon #" + str(poke_index) + ": " + file_input1.readline())
+                # if even num line, print ability
             else:
-                print("   Ability of Pokemon #"+str(poke_index)+": "+file_input1.readline())
+                print("   Ability of Pokemon #" + str(poke_index) + ": " + file_input1.readline())
                 # count one poke index up
                 poke_index += 1
+            current_byte = file_input1.tell()
+            i_count += 1
         file_input1.close()
     else:
         print(Bugger)
